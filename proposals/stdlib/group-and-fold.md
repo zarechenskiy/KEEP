@@ -28,7 +28,7 @@ where `Grouping<T, K>` is an interface defined as following:
 
 ```kotlin
 // A wrapper around a source of elements which could be iterated 
-// with the `keySelector` function attached to it.
+// with the `keySelector: (T) -> K`  function attached to it.
 interface Grouping<T, out K> {
     fun elementIterator(): Iterator<T>
     fun keySelector(element: T): K
